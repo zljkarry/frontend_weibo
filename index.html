@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link href="./assets/style/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--导航栏-->
+    <div id="guide">
+        <div id="center1">
+        <div><img src="./assets/images/logo/logo2.jpg" id="logo2"></div>
+
+        <div><input type="text" placeholder="搜索一下" id="search">
+        <i class="fa fa-search"  id="tosearch"></i>
+        </div>
+        <div class="upguide"><a href="index.html" class="active"><i class="fa fa-home"></i> 首页</a></div>
+
+        <div class="upguide" id="unn"><a href="mine.html"><i class="fa fa-user-o"></i> <span id = "un">用户名</span></a></div>
+
+        <!--消息和发微博在pc端不用在导航栏-->
+
+        <!--<div><i class="fa fa-envelope-o"></i></div>
+
+        <div><i class="fa fa-pencil-square-o"></i></div>-->
+        </div>
+    </div>
+    
+    
+    <!--导航栏下-->
+    <div id="b">
+        <!--装下面左右两栏-->
+        <div id="center2">
+        <!--左-->
+        <div id="left">
+                <ul>
+                        <li><a href="#care">关注</a></li>
+                        <li><a href="#hot">热门</a></li>
+                        <li><a href="#star">明星</a></li>
+                        <li><a href="#smile">搞笑</a></li>
+                      </ul>
+        </div>
+        <!--右-->
+        <div id="right">
+            <!--发布微博-->
+            <div id="bg1">
+                有什么新鲜事告诉大家？
+                <form id="post-article">
+                        
+                        <textarea id="input" placeholder="在这里输入内容..."></textarea>
+                        <p>您还可以输入<em style = "color: green" id="textCount">140</em>个字</p>
+                        <input type="submit" value="发布"  name="submit" id="sub"/>
+                        
+                    </form>
+            </div>
+            <!--微博正文-->
+            <div class="main">
+                <!--仅仅只是先写入一个框架看看效果-->
+                <div class="inmain">
+                <!--发布者栏-->
+                <div class="uploader">
+                    <div class="hp"><img src="./assets/images/headphoto/headphoto1.jpg"></div>
+                    <div class="name">cry</div>
+                    <div><button class="att" id="att">关注</button></div>
+                </div>
+                <!--内容栏-->
+                
+                <div class="content">第一条微博</div>
+
+                <!--互动栏-->
+                <div class="inter">
+                <!--收藏-->
+                <i class="fa fa-heart-o" aria-hidden="true" id="collect" style="background-color: aliceblue;"></i>
+                <!--评论-->
+                <i class="fa fa-comment-o" aria-hidden="true" id="comment" style="background-color: aliceblue;"></i>
+                <!--赞-->
+                <i class="fa fa-thumbs-o-up" aria-hidden="true" id="like" style="background-color: aliceblue;"></i>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--右下角两个按钮-->
+        <!--刷新-->
+        <div id="undo">
+            <button id="undobtn"><i class="fa fa-undo fa-4x" aria-hidden="true"></i></button>
+        </div>
+        <!--返回顶部-->
+        <div id="totop">
+            <a href="javascript:;" id="btn">
+                <img src="./assets/images/totop.png">
+            </a>
+        </div>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
