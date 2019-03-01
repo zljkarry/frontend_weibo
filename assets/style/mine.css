@@ -79,6 +79,10 @@
 
 }
 
+#maintop div{
+    color: #ffffff;
+}
+
 #headphoto img {
     width: 100px;
     height: 100px;

@@ -43,7 +43,7 @@ function getCookie(name) {
 
 //信息提醒
 function showMsg(msg) {
-    document.getElementById("CheckMsg").innerHTML(msg);
+    document.getElementById("CheckMsg").innerHTML = msg;
 }
 
 function login() {

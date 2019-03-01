@@ -527,3 +527,5 @@ document.getElementById("undo").onclick = update;
 function update() {
 
 }
+
+//刷新后仍显示微博，即向后端请求数据，返回的数据渲染页面，思路和微博发送成功后显示微博一样

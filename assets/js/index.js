@@ -37,17 +37,18 @@ function ToTop() {
     }
 }
 
-/*//将字符串转化为json
+//将字符串转化为json
 var l = JSON.parse(localStorage.getItem("temp"));
+console.log(l);
 //取到当前用户名
-var uname = l.username;
+var uname = l.uname;
 //将展示用户名处改为当前用户的用户名
 var un = document.getElementById("un");
-un.innerHTML = uname;*/
+un.innerHTML = uname;
 
 //先写死，当前用户为smile
-var un = document.getElementById("un");
-un.innerHTML = "smile";
+//var un = document.getElementById("un");
+//un.innerHTML = "smile";
 
 
 //搜索
@@ -112,27 +113,24 @@ function SubFun() {
     if (btn.style.opacity == 0.5) {
         alert("不能发布");
     } else {
-        /*//ajax请求后端
+        //ajax请求后端
         var xhr = new XMLHttpRequest();
-        open("POST","",true);
-        var data = "uname=" + uname + 
-        "&content=" + document.getElementById("input").value;
+        xhr.open("POST", "/blog", true);
+        var data = "uname=" + uname +
+            "&content=" + document.getElementById("input").value;
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send();
-        xhr.onreadystatechange = function(){
-            if (xhr.readyState === 4 && xhr.status === 200){
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
                 var tdata = JSON.parse(xhr.responseText);
-                if(tdata.outcome == "success"){
+                if (tdata.outcome == "success") {
                     ShowCom();
-                }else{
+                } else {
                     alert("发布失败");
                 }
-            }else{
-                alert("发布失败");
             }
-        }*/
-        //先调用下看效果
-        ShowCom();
+        }
+
 
         function ShowCom() {
             var main = document.getElementsByClassName("main")[0];
@@ -154,7 +152,8 @@ function SubFun() {
             //创建发布者栏里——用户名
             var name = document.createElement("div");
             name.className = "name";
-            name.innerHTML = "smile"; //name.innerHTML = uname;
+            //name.innerHTML = "smile"; 
+            name.innerHTML = uname;
             uploader.appendChild(name);
             //创建发布者栏里——关注
             var att = document.createElement("div");
@@ -187,8 +186,9 @@ function SubFun() {
                 main.appendChild(inmain);
             }
 
-            //将文本框中的内容删除
+            //将文本框中的内容删除并将计数改为140
             document.getElementById("input").value = "";
+            document.getElementById('textCount').innerText = 140;
             //调用互动函数
             InterFun();
         }
@@ -224,16 +224,15 @@ function InterFun() {
 
             //ajax
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "", true);
-            var data = "atter=" + atter +
-                "&uname=" + uname;
+            xhr.open("POST", "/add", true);
+            var data = "atter=" + atter;
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             // 提交
             xhr.send(data);
             // 等待服务器返回内容
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    var re = JSON.parse(responseText);
+                    var re = JSON.parse(xhr.responseText);
                     if (re.outcome == "success") {
                         att.innerHTML = "已关注";
                         att.style.cssText = 'color: #e7891c; border-color: #e7891c; outline:none;';
@@ -246,7 +245,7 @@ function InterFun() {
             //访问后端实现取消关注的功能
 
             //ajax
-            var xhr = new XMLHttpRequest();
+            /*var xhr = new XMLHttpRequest();
             xhr.open("POST", "", true);
             var data = "atter=" + atter +
                 "&uname=" + uname;
@@ -256,13 +255,15 @@ function InterFun() {
             // 等待服务器返回内容
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    var re = JSON.parse(responseText);
+                    var re = JSON.parse(xhr.responseText);
                     if (re.outcome == "success") {
                         att.innerHTML = "关注";
                         att.style.cssText = 'color: #26353b; border-color: #26353b; outline:none;';
                     }
                 }
-            }
+            }*/
+            att.innerHTML = "关注";
+            att.style.cssText = 'color: #26353b; border-color: #26353b; outline:none;';
 
 
         }
@@ -355,7 +356,8 @@ function InterFun() {
                         putc.style.cssText = "width: 100%; display: flex; justify-content: space-between; margin: 10px 0 0 0;padding: 5px 0; border-top:1px solid rgba(31, 137, 223, 0.747);";
                         //创建小框的一个子节点——用户名
                         var cname = document.createElement("div");
-                        cname.innerHTML = "smile"; //cname.innerHTML = uname;
+                        //cname.innerHTML = "smile";
+                        cname.innerHTML = uname;
                         putc.appendChild(cname);
                         //创建小框的一个子节点——回复评论按钮
                         var rescom = document.createElement("button");
@@ -407,7 +409,8 @@ function InterFun() {
                                     putres.style.cssText = "display: flex;";
                                     //创建一个子节点——表明回复人的容器
                                     var resperson = document.createElement("div");
-                                    resperson.innerHTML = "smile"; //resperson.innerHTML = uname;
+                                    //resperson.innerHTML = "smile"; 
+                                    resperson.innerHTML = uname;
                                     putres.appendChild(resperson);
                                     //创建一个子节点——盛装回复的容器
                                     var responsee = document.createElement("div");

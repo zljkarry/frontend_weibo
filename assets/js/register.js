@@ -41,11 +41,11 @@ function getCookie(name){
     return "";
 }*/
 
-document.getElementById("sub").onclick = checkForm;
+
 
 //信息提醒
 function showMsg(msg) {
-    document.getElementById("CheckMsg").innerHTML(msg);
+    document.getElementById("CheckMsg").innerHTML = msg;
 }
 
 
