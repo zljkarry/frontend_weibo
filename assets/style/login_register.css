@@ -99,15 +99,17 @@ input[type="submit"]:hover {
     font-size: 15px;
 }
 
-#login1,#register{
+#login1,
+#register {
     color: #db8945;
     font-family: '微软雅黑';
     border: none;
     background-color: transparent;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#login1 a,#register a{
+#login1 a,
+#register a {
     text-decoration: none;
     color: #db8945;
     font-family: '微软雅黑';
@@ -117,7 +119,7 @@ input[type="submit"]:hover {
 
 
 /*手机验证码登录页面*/
-#getpass2{
+#getpass2 {
     width: 90px;
     height: 35px;
     margin: 5px 44px -10px 44px;
@@ -126,7 +128,7 @@ input[type="submit"]:hover {
 }
 
 /*错误信息提醒*/
-.msg{
+.msg {
     color: #ea8c37;
     font-size: 14px;
     padding-left: 40px;

@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 /*导航栏样式*/
-#guide{
+#guide {
     width: 100%;
     height: 45px;
     position: fixed;
@@ -15,54 +15,58 @@
     /*box-shadow: 10px 10px 5px #666666;*/
 }
 
-#center1{
+#center1 {
     width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#logo2{
+#logo2 {
     width: 100px;
     height: 36px;
 }
-#search{
+
+#search {
     color: #666666;
     width: 300px;
     height: 20px;
 }
 
-.upguide a{
+.upguide a {
     text-decoration: none;
     color: #000000;
 }
 
-.upguide a:hover{
+.upguide a:hover {
 
     color: #e7891c;
 }
 
-.upguide .active{
+.upguide .active {
 
     color: #e7891c;
 }
 
 /*导航栏下面的样式*/
-#b{ 
-   
+#b {
+
     display: flex;
     justify-content: space-around;
     background-color: #a1cbe6;
-    height: 3000px;/*最后改成100%高度*/
-    
+    height: 3000px;
+    /*最后改成100%高度*/
+
 }
+
 /*主体样式*/
-#main{
+#main {
     width: 50%;
     background-color: #88bddd;
 }
+
 /*上面的样式*/
-#maintop{
+#maintop {
     width: 100%;
     height: 300px;
     background-image: url(../images/bg/bg1.jpg);
@@ -74,28 +78,30 @@
     align-content: center;
 
 }
-#headphoto img{
+
+#headphoto img {
     width: 100px;
     height: 100px;
-    border-radius:50%;
+    border-radius: 50%;
 }
-#maintop>div{
+
+#maintop>div {
     margin: 5px auto;
 }
 
-#username{
+#username {
     font-family: "微软雅黑";
     /*font: italic bold 18px "微软雅黑"；*/
 }
 
 /*下面的样式*/
-#bottom{
+#bottom {
     display: flex;
     padding: 20px 40px;
 }
 
 /*左边的样式*/
-#left{
+#left {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -105,23 +111,28 @@
     background-color: #fcf6f6;
     /*position: fixed;*/
 }
-#left>div{
+
+#left>div {
     padding: 3px 15px;
 }
-#left>div:first-child{
+
+#left>div:first-child {
     border-right: 1px solid #666;
 }
-#left div:hover{
+
+#left div:hover {
     color: #e7891c;
 }
+
 /*右边的样式*/
 
-#right{
+#right {
     width: 80%;
     margin-left: 10px;
 }
+
 /*发布微博的样式*/
-#bg1{
+#bg1 {
     height: 195px;
     width: 100%;
     background-color: aliceblue;
@@ -129,7 +140,7 @@
 
 }
 
-#input{
+#input {
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
@@ -139,100 +150,108 @@
 
 
 
-#sub{
+#sub {
     height: 30px;
     width: 70px;
     margin: 3px;
     background-color: #e7891c;
     border: none;
     color: #ffffff;
-    opacity : 0.5;
+    opacity: 0.5;
 }
+
 /*微博内容的样式*/
 
-.main{
+.main {
     display: inline-block;
     height: auto;
     width: 100%;
     margin: 10px 0;
-    
+
 }
-.inmain{
+
+.inmain {
     padding: 10px;
     height: auto;
     margin: 10px 0;
     background-color: aliceblue;
 }
-.uploader{
+
+.uploader {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
 }
-.hp img{
+
+.hp img {
     width: 50px;
     height: 50px;
-    border-radius:50%;
+    border-radius: 50%;
 }
-.name:nth-of-type(2){
+
+.name:nth-of-type(2) {
     align-self: flex-start;
 }
-.name:nth-of-type(2){
+
+.name:nth-of-type(2) {
     flex-grow: 1;
 }
 
-.att{
+.att {
     background-color: transparent;
     height: 25px;
     width: 60px;
-    border:  1px solid #26353b;
+    border: 1px solid #26353b;
     color: #26353b;
 }
-.att:hover{
+
+.att:hover {
     color: #e7891c;
     border-color: #e7891c;
 }
 
 
-.content{
+.content {
     /* height: 200px; */
     width: 100%;
     padding: 0 0 12px 54px;
 }
 
-.inter{
+.inter {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
 
 }
 
-.inter i{
-    border-radius:50%;
+.inter i {
+    border-radius: 50%;
     background-color: aliceblue;
 }
 
-.inter i:hover{
+.inter i:hover {
     color: #e7891c;
     background-color: aliceblue;
 }
 
 /*右下角两个按钮的样式*/
-#undo{
+#undo {
     position: fixed;
     bottom: 55px;
     right: 100px;
 
 }
 
-#undobtn{
+#undobtn {
     border: none;
     color: #e7891c;
     background-color: transparent;
-    
+
 }
 
-#totop,#btn img{
+#totop,
+#btn img {
     height: 50px;
     width: 55px;
     position: fixed;

@@ -1,31 +1,31 @@
 //将用户名 密码  有效期存储到cookie中
-function setCookie(name,value,days){
+function setCookie(name, value, days) {
     var date = new Date();
     date.setDate(date.getDate() + days);
-    if(getCookie(name).length < 0){
-        document.cookie=name+"="+escape(value)+";"+((days==null)?"":"dates="+date.toGMTString());
+    if (getCookie(name).length < 0) {
+        document.cookie = name + "=" + escape(value) + ";" + ((days == null) ? "" : "dates=" + date.toGMTString());
         return true;
-    }else{
+    } else {
         return false;
     }
-    
+
 }
 //cookie中 存储是按照键值对 存储的  
 //根据name获取对应的值
-function getCookie(name){
-    if(document.cookie.length > 0){
+function getCookie(name) {
+    if (document.cookie.length > 0) {
         var start = document.cookie.indexOf(name + "=");
         var end = -1;
-        if(start != -1){
+        if (start != -1) {
             start = start + name.length + 1;
-            end = document.cookie.indexOf(";" , start);
-            if(end == -1){
+            end = document.cookie.indexOf(";", start);
+            if (end == -1) {
                 end = document.cookie.length;
             }
-            return document.cookie.substring(start , end);
+            return document.cookie.substring(start, end);
         }
     }
-    
+
 }
 
 //或者这样
@@ -41,18 +41,18 @@ function getCookie(name){
     return "";
 }*/
 
- //信息提醒
- function showMsg(msg) {
+//信息提醒
+function showMsg(msg) {
     document.getElementById("CheckMsg").innerHTML(msg);
 }
 
-function login(){
+function login() {
     var username = document.getElementById("username");
     var password = document.getElementById("password");
     if (username == '' || password == '') {
         alert("用户名，密码不能为空");
-    }else {
- 
+    } else {
+
 
         //这里为用ajax获取用户信息并进行验证，如果账户密码不匹配则登录失败
         var xhr = new XMLHttpRequest();
@@ -78,7 +78,7 @@ function login(){
                 var tdata = JSON.parse(xhr.responseText);
                 if (tdata.outcome == "success") {
                     var d = JSON.stringify(tdata);
-                    window.localStorage.setItem("temp",d);
+                    window.localStorage.setItem("temp", d);
                     showMsg("登录成功，正在跳转");
                     window.location.href = "../../index.html";
                 }
@@ -91,4 +91,3 @@ function login(){
 
 
 }
-

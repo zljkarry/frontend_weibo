@@ -1,5 +1,3 @@
-
-
 //显示个人已发微博
 
 //关注数
@@ -213,7 +211,7 @@ function SubFun() {
             //创建发布者栏里——用户名
             var name = document.createElement("div");
             name.className = "name";
-            name.innerHTML = "smile";//name.innerHTML = uname;
+            name.innerHTML = "smile"; //name.innerHTML = uname;
             uploader.appendChild(name);
             //创建发布者栏里——关注
             var att = document.createElement("div");
@@ -373,7 +371,7 @@ function InterFun() {
             document.getElementById("showcom").style.display = "block";
             comm.style.backgroundColor = "#e7891c";
         } else {
-            
+
             if (comm.style.backgroundColor == "aliceblue") {
 
                 //改变背景颜色
@@ -422,7 +420,7 @@ function InterFun() {
                         putc.style.cssText = "width: 100%; display: flex; justify-content: space-between; margin: 10px 0 0 0;padding: 5px 0; border-top:1px solid rgba(31, 137, 223, 0.747);";
                         //创建小框的一个子节点——用户名
                         var cname = document.createElement("div");
-                        cname.innerHTML = "smile";//cname.innerHTML = uname;
+                        cname.innerHTML = "smile"; //cname.innerHTML = uname;
                         putc.appendChild(cname);
                         //创建小框的一个子节点——回复评论按钮
                         var rescom = document.createElement("button");
@@ -474,7 +472,7 @@ function InterFun() {
                                     putres.style.cssText = "display: flex;";
                                     //创建一个子节点——表明回复人的容器
                                     var resperson = document.createElement("div");
-                                    resperson.innerHTML = "smile";//resperson.innerHTML = uname;
+                                    resperson.innerHTML = "smile"; //resperson.innerHTML = uname;
                                     putres.appendChild(resperson);
                                     //创建一个子节点——盛装回复的容器
                                     var responsee = document.createElement("div");
@@ -483,7 +481,7 @@ function InterFun() {
                                     putres.appendChild(responsee);
                                     //创建一个子节点——表明被回复人的容器
                                     var resedper = document.createElement("div");
-                                    resedper.innerHTML = "cry";//暂时写成这样，等把东西挂到DOM树上之后，层级关系确定后再取评论人的用户名修改
+                                    resedper.innerHTML = "cry"; //暂时写成这样，等把东西挂到DOM树上之后，层级关系确定后再取评论人的用户名修改
                                     //resedper.innerHTML = this.parentNode.children[0].children[0].innerHTML;
                                     putres.appendChild(resedper);
                                     //将小框整体给到大框
